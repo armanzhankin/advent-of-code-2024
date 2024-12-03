@@ -43,4 +43,18 @@ func main() {
 	}
 
 	fmt.Println(res)
+
+	setOfInts := make(map[int]int)
+
+	for _, num := range secondTable {
+		setOfInts[num]++
+	}
+
+	var secondRes int
+
+	for _, num := range firstTable {
+		secondRes += setOfInts[num] * num
+	}
+
+	fmt.Println(secondRes)
 }
